@@ -1,7 +1,7 @@
 /* Start Variables */
 :root {
-  --main-color: #19c8fa;
-  --transparent-color: rgb(15 116 143 / 70%);
+  --main-color: #81B737;
+  --transparent-color: rgb(129, 183, 55 , 70%);
   --section-padding: 100px;
 }
 /* End Variables */
@@ -78,7 +78,7 @@ ul {
   border-radius: 50%;
   border: 2px solid #333;
   bottom: -38px;
-  background-color: white;
+  background-color: var(--main-color);
 }
 .main-heading p {
   width: 550px;
@@ -111,8 +111,22 @@ header .container::after {
   width: calc(100% - 30px);
   left: 15px;
 }
+
+header .logo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  color: white;
+  text-decoration: none;
+}
+
+header .logo span {
+  color: var(--main-color);
+}
+
 header .logo img {
-  height: 40px;
+  height: 70px;
 }
 header nav {
   flex: 1;
@@ -194,7 +208,7 @@ header nav .form i {
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: rgb(0 0 0 / 60%);
+  background-color: rgb(0 0 0 / 80%);
 }
 .landing .text {
   position: absolute;
@@ -340,8 +354,10 @@ header nav .form i {
   }
 }
 .design .image img {
+  width: 80%;
   position: relative;
-  bottom: -150px;
+  bottom: -120px;
+  border-radius: 10px;
 }
 .design .text {
   color: white;
@@ -356,13 +372,28 @@ header nav .form i {
 .design .text ul li {
   padding: 15px 0;
 }
+
 .design .text ul li::before {
-  font-family: "Font Awesome 5 Free";
-  content: "\f108";
   font-weight: 900;
   margin-right: 20px;
   position: relative;
   top: 1px;
+}
+.design .text ul li:first-child::before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f5bb";
+}
+.design .text ul li:nth-child(2)::before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f7e4";
+}
+.design .text ul li:nth-child(3)::before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f0fa";
+}
+.design .text ul li:nth-child(4)::before {
+  font-family: "Font Awesome 5 Free";
+  content: "\f0ac";
 }
 /* End Design */
 /* Start Portfolio */
@@ -490,6 +521,7 @@ header nav .form i {
   bottom: -120px;
   margin-top: -120px;
   max-width: 100%;
+  border-radius: 10px;
 }
 @media (max-width: 767px) {
   .about img {
@@ -503,7 +535,7 @@ header nav .form i {
   padding-top: var(--section-padding);
   padding-bottom: var(--section-padding);
   text-align: center;
-  background-image: url("../images/stats.png");
+  background-image: url("https://images.unsplash.com/photo-1532549231243-3af8b716c0df?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8fHx8fHx8MTY0NDYyMTIxMA&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1080");
   background-size: cover;
   position: relative;
 }
@@ -522,7 +554,7 @@ header nav .form i {
   flex-wrap: wrap;
 }
 .stats .container .box {
-  color: white;
+  color: black;
   padding: 50px;
   background-color: var(--transparent-color);
 }
@@ -545,7 +577,7 @@ header nav .form i {
   width: 40px;
   height: 40px;
   display: flex;
-  background-color: black;
+  background-color: white;
   justify-content: center;
   align-items: center;
   border-radius: 50%;
@@ -677,7 +709,7 @@ header nav .form i {
 .quote {
   padding-top: var(--section-padding);
   padding-bottom: var(--section-padding);
-  background-image: url("../images/quote.jpg");
+  background-image: url("https://images.unsplash.com/photo-1544108182-8810058c3a7d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8fHx8fHx8MTY1MzYwNzAyMw&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1080");
   background-size: cover;
   position: relative;
   text-align: center;
@@ -787,7 +819,7 @@ header nav .form i {
 .subscribe {
   padding-top: var(--section-padding);
   padding-bottom: var(--section-padding);
-  background-image: url("../images/subscribe.jpg");
+  background-image: url("https://images.unsplash.com/photo-1590474879704-135dbd7f8ffd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8fHx8fHx8MTY1MzYwNDEzOQ&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1080");
   background-size: cover;
   position: relative;
   color: white;
@@ -939,7 +971,7 @@ header nav .form i {
 .footer {
   padding-top: calc(var(--section-padding) / 2);
   padding-bottom: calc(var(--section-padding) / 2);
-  background-image: url("../images/subscribe.jpg");
+  background-image: url("https://images.unsplash.com/photo-1590474879704-135dbd7f8ffd?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxfDB8MXxyYW5kb218MHx8fHx8fHx8MTY1MzYwNDEzOQ&ixlib=rb-1.2.1&q=80&utm_campaign=api-credit&utm_medium=referral&utm_source=unsplash_source&w=1080");
   background-size: cover;
   position: relative;
   color: white;
@@ -952,14 +984,12 @@ header nav .form i {
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: rgb(0 0 0 / 70%);
+  background-color: rgb(0 0 0 / 80%);
 }
 .footer .container {
   position: relative;
 }
-.footer img {
-  margin-bottom: 20px;
-}
+
 .footer p:not(.copyright) {
   text-transform: uppercase;
   padding: 20px;
